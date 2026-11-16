@@ -4,7 +4,8 @@ name: Gerar APK JanArt
 on:
   push:
     paths:
-      - 'JanArtAndroid-projeto.zip'
+      - 'JanArt-projeto-android.zip'
+      - '.github/workflows/build-apk.yml'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Extrair arquivos
-        run: unzip -o JanArtAndroid-projeto.zip
+        run: unzip -o JanArt-projeto-android.zip
 
       - name: Configurar Java
         uses: actions/setup-java@v4
